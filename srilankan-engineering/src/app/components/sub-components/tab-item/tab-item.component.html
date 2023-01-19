@@ -1,0 +1,19 @@
+<div class="tab-content d-flex justify-content-center align-items" style="--background-image: url({{tabData.imgUrl}});">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items {{tabData.contentVisible}} h-100">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-12 d-flex justify-content-end align-items-center left-col">
+                <h1 class="tab-title">{{title1}}<br>{{title2}}</h1>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center right-col">
+                <div [innerHTML]="tabData.desc1"></div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items {{tabData.sliderVisible}} h-100">
+            <div class="col d-flex justify-content-end align-items-center">
+                <div class="container">
+                    <app-workshops-slider></app-workshops-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

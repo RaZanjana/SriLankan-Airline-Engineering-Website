@@ -1,0 +1,7 @@
+<div class="workshop-section">
+    <swiper [config]="CarouselConfig" class="mySwiper">
+        <ng-template swiperSlide  *ngFor="let carouselItem of carouselItems">
+            <app-workshop-item [slidedata]='carouselItem'></app-workshop-item>
+        </ng-template>
+    </swiper>
+</div>

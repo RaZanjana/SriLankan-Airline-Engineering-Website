@@ -1,0 +1,12 @@
+.client-logo{
+    .logo-img{
+        filter: saturate(0%);
+        -webkit-transition: .5s linear;
+        transition: .5s linear;
+
+        &:hover{
+            filter: saturate(100%);
+            cursor: pointer;
+        }
+    }
+}

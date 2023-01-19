@@ -1,0 +1,11 @@
+<div class="mask"></div>
+<img src="{{data.imgUrl}}" alt="srilankan engineering" class="main-carousel-slide">
+<div class="container content d-flex align-items-center">
+    <div>
+        <h1>{{data.title}}</h1>
+        <p>{{data.caption}}</p>
+        <button mat-raised-button class="btn-primary-dark me-2 mb-2 {{data.btnOneDisplay}}" (click)="SendInquiry()" routerLink="/srilankan-engineering/inquiry"><i class="bi bi-send"></i>&nbsp;&nbsp;Send A message</button>
+        <button mat-raised-button class="mat-btn-light mb-2 {{data.btnTwoDisplay}}" (click)="CallEngineering()"><i class="bi bi-telephone-fill"></i>&nbsp;&nbsp;+94 (19) 733 2200</button>
+        <button mat-raised-button class="mat-btn-light {{data.btnThreeDisplay}}" routerLink="/srilankan-engineering/{{data.btnThreeUrl}}">{{data.btnThreeText}}&nbsp;&nbsp;<i class="bi bi-chevron-double-right"></i></button>
+    </div>
+</div>

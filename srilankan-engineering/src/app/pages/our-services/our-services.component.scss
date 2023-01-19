@@ -1,0 +1,28 @@
+$primary-blue: #0088DD;
+$text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+$service-prev-gradient : linear-gradient(180deg, rgba(18, 22, 34, 0) 0%, #121622 100%);
+
+.content {
+    .title-section {
+        width: 100%;
+
+        .content-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #ffffff;
+            display: inline-block;
+        }
+
+        .line {
+            display: inline-block;
+            width: inherit;
+        }
+    }
+
+    .tab-view {
+        .mat-tab-label {
+            color: #0088DD !important;
+        }
+    }
+}

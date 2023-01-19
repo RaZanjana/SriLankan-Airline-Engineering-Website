@@ -1,0 +1,45 @@
+<!-- Main Carousel -->
+<div class="main-carousel-section {{mainCaroselItemsDisply}}">
+    <swiper [config]="mainCarouselConfig" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let image of mainCaroselItems">
+            <app-main-carosel-item class="d-flex main-carousel" [data]='image'></app-main-carosel-item>
+        </ng-template>
+    </swiper>
+</div>
+
+<!-- services preview section -->
+<div class="container-fluid services-preview p-1 {{servicePreviewItemsDisplay}}">
+    <swiper [config]="servicePreviewConfig" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let image of servicePreviewItems">
+            <app-service-preview-item class="service-item-div" [data]='image'></app-service-preview-item>
+        </ng-template>
+    </swiper>
+</div>
+
+<!-- client section slider -->
+<div class="container-fluid client-slider-section p-3 bg-white {{clientSliderItemsDsiplay}}">
+    <swiper [config]="clientsConfig" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let client of clientSliderItems">
+            <app-client-logo-item [data]='client'></app-client-logo-item>
+        </ng-template>
+    </swiper>
+</div>
+
+<!-- Recent Media Section -->
+<div class="container-fluid media-sec p-4 {{mediaItemsDisplay}}">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-4">
+            <h1 class="mb-1 title">Media Gallery</h1>
+            <hr class="mt-0">
+            <p class="desc">Check out all our latest news and events, through which we take you on our exciting journey and talk about our milestones, partnerships, collaborations and more.</p>
+            <button mat-raised-button class="mat-btn-light mb-2" routerLink="/srilankan-engineering/media">Read Now&nbsp;<i class="bi bi-chevron-double-right"></i></button>
+        </div>
+        <div class="col-md-8">
+            <swiper [config]="mediaConfig" class="mySwiper">
+                <ng-template swiperSlide *ngFor="let media of mediaItems">
+                    <app-media-item [data]='media'></app-media-item>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+</div>

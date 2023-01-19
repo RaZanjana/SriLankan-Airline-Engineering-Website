@@ -1,0 +1,62 @@
+$dark-blue-hover: #090C14;
+$primary-blue: #0088DD;
+
+.modal-sec{
+    background: linear-gradient(90deg, #121622 0%, rgba(18, 22, 34, 0.772917) 49.79%, rgba(18, 22, 34, 0) 100%), linear-gradient(0deg, rgba(18, 22, 34, 0.5), rgba(18, 22, 34, 0.5)), var(--background-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+
+    .modal-header{
+        border-bottom: none;
+    }
+    .btn-close{
+        color: #ffffff;
+        background: none !important;
+        width: auto !important;
+        height: auto !important;
+
+        &:focus{
+            box-shadow: 0 0 0 0.15rem rgb(255 255 255 / 25%);
+        }
+    }
+    .btn-link{
+        background-color: $dark-blue-hover;
+        color: $primary-blue;
+        text-decoration: none;
+        font-weight: 600;
+        width: 100%;
+    }
+    .cont-title{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .social-media i{
+        color: white;
+        font-size: 1.5rem;
+    }
+    .left{
+        border-right: 2px solid rgba(0, 136, 221, 0.5);
+    }
+    .mail{
+        letter-spacing: 3px;
+    }
+}
+
+
+@media only screen and (max-width: 426px){
+    .modal-sec{
+        background: linear-gradient(0deg, #121622 0%, rgba(18, 22, 34, 0.772917) 49.79%, rgba(18, 22, 34, 0) 100%), linear-gradient(0deg, rgba(18, 22, 34, 0.5), rgba(18, 22, 34, 0.5)), var(--background-image);
+        .left{
+            border-right: none;
+            padding-bottom: 1rem;
+
+        }
+        .btn-link{
+            letter-spacing: 3px;
+        }
+    }
+}

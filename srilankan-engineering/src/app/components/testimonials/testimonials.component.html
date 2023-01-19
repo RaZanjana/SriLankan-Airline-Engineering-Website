@@ -1,0 +1,11 @@
+<div class="container testimonaila-sec">
+    <div class="text-center pt-4 pb-4">
+        <h5 class="sub-title mb-0">Testimonials</h5>
+        <h1 class="title">What our partners say about us</h1>
+        <swiper [config]="testimonialConfig" class="mySwiper">
+            <ng-template swiperSlide *ngFor="let testimonial of testimonials">
+                <app-testimonial-item [data]='testimonial' class="testimonial-item-div"></app-testimonial-item>
+            </ng-template>
+        </swiper>
+    </div>
+</div>

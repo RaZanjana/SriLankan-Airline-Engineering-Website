@@ -1,0 +1,174 @@
+<!-- Desktop Deafult Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-default p-0 fixed-top" id="navbar_default">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo-white.png" alt="Bootstrap" width="160">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="openSideMenu(content)">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav" *ngFor="let navMenu of navMenuList">
+        <li class="nav-item">
+          <a class="nav-link {{navMenu.navlinkdisplay}}" routerLink="/srilankan-engineering/{{navMenu.url}}"
+            routerLinkActive="active" ariaCurrentWhenActive="page">{{navMenu.text}}</a>
+          <button type="button" class="btn btn-primary {{navMenu.btndisplay}}" routerLink="/srilankan-engineering/{{navMenu.url}}">{{navMenu.text}}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Desktop Scroll Navigation bar -->
+<nav class="navbar navbar-expand-lg p-0 fixed-top shadow d-none navbar_scroll" id="navbar_scroll">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo.png" alt="Bootstrap" width="160">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="openSideMenu(content)">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav" *ngFor="let navMenu of navMenuList">
+        <li class="nav-item">
+          <a class="nav-link {{navMenu.navlinkdisplay}}" routerLink="/srilankan-engineering/{{navMenu.url}}"
+            routerLinkActive="active" ariaCurrentWhenActive="page">{{navMenu.text}}</a>
+          <button type="button" class="btn btn-primary {{navMenu.btndisplay}}" routerLink="/srilankan-engineering/{{navMenu.url}}">{{navMenu.text}}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile navigation bar -->
+<div class="side-nav">
+  <ng-template #content let-offcanvas>
+    <div class="offcanvas-header d-flex align-items-center">
+      <img src="assets/images/logo.png" alt="Bootstrap" width="100" height="36">
+      <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group list-group-flush" *ngFor="let navMenu of navMenuList">
+        <li class="list-group-item d-flex justify-content-between align-items-center {{navMenu.navlinkdisplay}}"
+          routerLink="/srilankan-engineering/{{navMenu.url}}" (click)="offcanvas.dismiss('Cross click')">
+          {{navMenu.text}}
+          <span class="badge bg-primary"><i class="{{navMenu.icon}}"></i></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center {{navMenu.btndisplay}}">
+          <button type="button" class="btn btn-primary w-100" routerLink="/srilankan-engineering/{{navMenu.url}}" (click)="offcanvas.dismiss('Cross click')">{{navMenu.text}}</button>
+        </li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer mb-2 text-center">
+      <small class="p-4 text-muted"><span class="copyright">Ⓒ 2023 <a href="">SriLankan</a> IT Systems. All rights
+          reserved.</span></small>
+    </div>
+  </ng-template>
+</div>
+
+<!-- Page contents -->
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer class="footer">
+  <!-- Top Content -->
+  <div class="container">
+    <div class="row d-flex justify-content-between pt-2 pb-2">
+      <!-- Text Content -->
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 d-flex align-items-center justify-content-between p-2">
+        <h2 class="text-white mb-0">Get in-touch today!</h2>
+        <button mat-raised-button class="mat-btn-light" routerLink="/srilankan-engineering/inquiry">Inquiry <i class="bi bi-chevron-double-right"></i></button>
+      </div>
+      <!-- Social Media Icon Content -->
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 social-media-icons p-2">
+        <div class="w-100 d-flex justify-content-between" *ngFor="let obj of footerContent">
+          <div *ngFor="let s_media of obj.socialmedia">
+            <a href="{{s_media.url}}" target="_blank"><i class="{{s_media.icon}}" matTooltip="{{s_media.tooltip}}"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Middle Content -->
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-between">
+      <!-- Text Content -->
+      <div class="col-md-6 col-sm-12 col-12 footer-left" style="--ftbackground-image: url({{footerbg}});">
+        <div class="content" >
+          <img src="assets/images/logo-white.png" alt="" width="146" height="52" class="mb-3">
+          <!-- Footer Links -->
+          <div class="row d-flex justify-content-start" *ngFor="let links of footerContent">
+            <div class="col-md-6 col-sm-6 col-6 pt-1 pb-1" *ngFor="let link of links.footerlinks">
+              <a class="nav-link" style="text-align: initial;" routerLink="/srilankan-engineering/{{link.url}}" routerLinkActive="active" ariaCurrentWhenActive="page">{{link.text}}</a>
+            </div>
+          </div>
+          <h2 class="text-white mb-0">Contact us for questions</h2>
+          <hr class="mt-0">
+          <!-- Contact Number 1 -->
+          <div class="row d-flex contact ms-0 mb-2">
+            <div class="col-2 bg-white ico">
+              <h2 class="m-1 d-flex align-items-center justify-content-center"(click)="CallPhone1()"><i class="bi bi-telephone-fill"></i></h2>
+            </div>
+            <div class="col-10">
+              <h2 class="m-1 d-flex align-items-center text" (click)="CallPhone1()">
+                +94 (19) 733 2023
+              </h2>
+            </div>
+          </div>
+          <!-- Contact Number 2 -->
+          <div class="row d-flex contact ms-0 mb-2">
+            <div class="col-2 bg-white ico">
+              <h2 class="m-1 d-flex align-items-center justify-content-center" (click)="CallPhone2()"><i class="bi bi-telephone-fill"></i></h2>
+            </div>
+            <div class="col-10">
+              <h2 class="m-1 d-flex align-items-center text" (click)="CallPhone2()">
+                +94 (19) 733 2080
+              </h2>
+            </div>
+          </div>
+          <!-- Contact Email -->
+          <div class="row d-flex contact ms-0 mb-2">
+            <div class="col-2 bg-white ico">
+              <h2 class="m-1 d-flex align-items-center justify-content-center" (click)="SendMail()"><i class="bi bi-envelope"></i></h2>
+            </div>
+            <div class="col-10">
+              <h2 class="m-1 d-flex align-items-center text" (click)="SendMail()">
+                mro@srilankan.com
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Map Content -->
+      <div class="col-md-6 col-sm-12 col-12 footer-right" style="--background-image: url({{map}});"></div>
+    </div>
+  </div>
+  <!-- Bottom Content -->
+  <div class="container-fluid ftr-bottom">
+    <div class="container">
+      <div class="row d-flex justify-content-between pt-4 pb-4">
+        <div class="col-6 d-flex justify-content-between">
+          <a href="https://www.srilankan.com/en_uk/Corporate/privacy-policy" target="_blank" class="policies">Privacy Policy</a>
+          <a href="https://www.srilankan.com/en_uk/Corporate/cookie-policy" target="_blank" class="policies">Cookie Policy</a>
+          <a href="https://www.srilankan.com/en_uk/Corporate/legal-notice" target="_blank" class="policies">Legal Notice</a>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <span class="copyright">Ⓒ 2023 <a href="https://www.srilankan.com/en_uk/us" target="_blank">SriLankan</a> IT Systems. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Contact floating button -->
+<div class="floating-btn">
+  <button mat-fab color="light" mat-fab aria-label="Example icon button with a heart icon" (click)="openContactModal()">
+    <i class="bi bi-telephone-fill"></i>
+  </button>
+</div>
+
+<div class="toast-div">
+    <ngb-toast *ngIf="showToast" header="Note!" [autohide]="false" (hidden)="showToast=false" style="width: 98%;">
+      We use cookies to help our website function properly, for analytics, marketing and to personalise the content you see. By continuing to browse this site, you give consent for cookies to be used. For more details, please read our <a href="https://www.srilankan.com/en_uk/Corporate/cookie-policy" target="_blank">Cookie Policy</a>, <a href="https://www.srilankan.com/en_uk/Corporate/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://www.srilankan.com/en_uk/Corporate/legal-notice" target="_blank">Terms of Use</a>.
+	</ngb-toast>
+</div>

@@ -1,0 +1,96 @@
+<div class="container-fluid bg inq-sec" style="--ftbackground-image: url({{bg}});">
+    <div class="content p-4 h-100">
+        <div class="row d-flex justify-content-center h-100">
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12 d-flex justify-content-end align-items-center left">
+                <h1 class="text-center text-white title">We are ready to <br>support you!</h1>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12 d-flex justify-content-start align-items-center right">
+                <div class="form-area bg-white">
+                    <form [formGroup]="inqData">
+                        <!-- Inquiry Type -->
+                        <div class="row inq-typ mb-3">
+                            <label for="" class="inq-label mb-1">Type of inquiry</label>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button value="1" class="pe-4 genInq"  [checked]="checkedGen">General
+                                        Inquiry</mat-radio-button>
+                                    <mat-radio-button value="2" class="aogInq"  [checked]="checkedAOG">AOG Inquiry</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                        <!-- Brief Inquiry -->
+                        <div class="row inq-brief">
+                            <mat-form-field class="example-full-width w-100" appearance="outline">
+                                <mat-label>Brief on the inquiry</mat-label>
+                                <textarea type="text" matInput #message [rows]="4" formControlName="inquiry"
+                                    name="inquiry" [errorStateMatcher]="matcher"
+                                    placeholder="You can type your inquiry in short here..."></textarea>
+                                <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <!-- Organization Name -->
+                        <div class="row org-name">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Organization Name</mat-label>
+                                <input type="text" matInput formControlName="organization" [errorStateMatcher]="matcher"
+                                    name="organization" placeholder="Type your organization name here...">
+                            </mat-form-field>
+                        </div>
+                        <!-- Contact person -->
+                        <div class="row cont-person">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Contact Person</mat-label>
+                                <input type="text" matInput formControlName="contactPerson"
+                                    [errorStateMatcher]="matcher" name="contactPerson"
+                                    placeholder="Who is the contact person?">
+                            </mat-form-field>
+                        </div>
+                        <!-- Contact country code -->
+                        <div class="row cont-num">
+                            <mat-form-field class="col-md-4" appearance="outline">
+                                <mat-label>Code</mat-label>
+                                <input matInput aria-label="State" [matAutocomplete]="auto" required
+                                formControlName="countycode" placeholder="Search Country"
+                                    [errorStateMatcher]="matcher" name="countycode">
+                                <mat-autocomplete #auto="matAutocomplete">
+                                    <mat-option *ngFor="let country of filteredCountryCodes | async"
+                                        [value]="country.dial_code">
+                                        <flag code="{{country.code}}" [size]="'lg'" [effect]="'wave'"></flag>
+                                        <span>&nbsp;&nbsp;</span>
+                                        <small>{{country.name}}</small>
+                                    </mat-option>
+                                </mat-autocomplete>
+                            </mat-form-field>
+                            <mat-form-field class="col-md-8" appearance="outline">
+                                <mat-label>Contact Number</mat-label>
+                                <input type="text" matInput formControlName="phoneno" [errorStateMatcher]="matcher"
+                                    name="phoneno" placeholder="Type your contact number">
+                            </mat-form-field>
+                        </div>
+                        <!-- Email Address -->
+                        <div class="row email-sec">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email Address</mat-label>
+                                <input type="text" matInput formControlName="email" [errorStateMatcher]="matcher"
+                                    name="email" placeholder="Type your email here...">
+                            </mat-form-field>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-center btm-rw">
+                            <!-- Terms & Conditions context -->
+                            <div class="col d-flex justify-content-start align-items-center terms-div">
+                                <mat-checkbox class="example-margin" formControlName="agree" name="agree">I Agreed <span class="terms"><a
+                                            href="https://www.srilankan.com/en_uk/Corporate/legal-notice" target="_blank">Terms & Conditions</a></span></mat-checkbox>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="col d-flex justify-content-end align-items-center submit-btnsec">
+                                <button mat-raised-button class="btn-primary-dark me-2"
+                                    type="submit" [disabled]="inqData.invalid" (click)="getInquiryFormData(inqData.value)">Submit&nbsp;&nbsp;<i
+                                        class="bi bi-chevron-double-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

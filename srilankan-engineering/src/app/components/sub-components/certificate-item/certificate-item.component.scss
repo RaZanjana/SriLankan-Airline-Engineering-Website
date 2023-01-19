@@ -1,0 +1,46 @@
+$dark-blue: #121622;
+
+.card-title h4{
+    color: $dark-blue;
+    font-weight: 500;
+    text-align: left !important;
+}
+.download-ico h4 i{
+    font-size: 1.8rem;
+}
+.card-content{
+    color: $dark-blue;
+    .country h4{
+        text-align: left !important;
+    }
+    h4 span{
+        font-size: 1.8rem;
+    }
+}
+
+.item{
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: ease-in-out 300ms;
+    .card-body{
+        padding: 0;
+    }
+    .flag{
+        width: 30%;
+    }
+    .content{
+        width: 70%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+    &:hover{
+        background-color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+}
+
+
+// .card-title h4{
+//     font-weight: 700 !important;
+// }

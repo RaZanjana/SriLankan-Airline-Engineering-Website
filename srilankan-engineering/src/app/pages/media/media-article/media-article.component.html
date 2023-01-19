@@ -1,0 +1,7 @@
+<div class="container-fluid bg-content" style="--background-image:url({{media_img}})">
+    <div class="container p-4">
+        <button mat-raised-button class="mat-btn-light" (click)="goBack()"><i class="bi bi-arrow-left"></i>&nbsp;&nbsp;Go Back</button>
+        <h1 class="title mt-3 text-white">{{media_title}}</h1>
+        <p class="desc text-white" [innerHTML]="mediaDesc"></p>
+    </div>
+</div>

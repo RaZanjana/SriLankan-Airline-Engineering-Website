@@ -1,0 +1,16 @@
+<div class="modal-sec modal-content">
+    <div class="modal-header">
+		<h4 class="modal-title mb-0"><span class="certificate_name">{{cName}}</span> | {{cCountry}}</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"><i
+            class="bi bi-x-lg"></i></button>
+	</div>
+    <div class="modal-body">
+		<pdf-viewer [src]="cFile"
+              [render-text]="true"
+              [original-size]="false" class="pdfViewer"
+  ></pdf-viewer>
+	</div>
+    <div class="modal-footer">
+		<button type="button" class="btn btn-primary-dark" (click)="downloadPdf()">Download</button>
+	</div>
+</div>

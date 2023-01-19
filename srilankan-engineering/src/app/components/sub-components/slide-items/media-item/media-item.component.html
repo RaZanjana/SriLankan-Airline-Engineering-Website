@@ -1,0 +1,18 @@
+<!-- <div class="media-item d-flex justify-content-start align-items-end" (click)="LoadMedia(data)">
+    <div class="mask"></div>
+    <img src="{{data.imageURL}}" alt="srilankan engineering" class="service-wrap-img">
+    <div class="d-flex m-2 mb-1">
+       <div style="z-index: 1500">
+        <h2 class="mb-0">{{data.title}}</h2>
+        <p #contentdiv class="d-none" [innerHTML]="(data.caption)"></p>
+        <p>{{(content.length>60)?(content | slice:0:60)+'...':(content)}}</p>
+       </div>
+    </div>
+</div> -->
+
+
+<lightgallery [settings]="gallery_settings" [onBeforeSlide]="onBeforeSlide"> 
+    <a href={{data.imageURL}} class="gallery-item">
+        <img alt={{data.title}} src={{data.imgThumbnail}} class="img-fluid thumbnail" />
+    </a>
+</lightgallery>

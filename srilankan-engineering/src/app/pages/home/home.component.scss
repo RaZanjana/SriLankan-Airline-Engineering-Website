@@ -1,0 +1,186 @@
+@import "~swiper/css";
+@import "~swiper/css/effect-fade";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+
+$dark-blue: #121622;
+
+// Main Carousel Style
+.main-carousel-section {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Swiper navigation button styles
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev,
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    background: rgba(18, 22, 34, 0.4);
+    border-radius: 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+  }
+
+  // Swiper carousel indicator styles
+  .swiper-pagination-bullet {
+    width: 24px;
+    height: 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .main-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+// Service list preview style
+.services-preview {
+  background-color: $dark-blue;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .service-item-div {
+    position: relative;
+    min-width: 100%;
+    min-height: 300px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev,
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    background: rgba(211, 211, 211, 0.4);
+    border-radius: 5px;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: small;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+// Our Client styles
+.client-slider-section{
+  .title{
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  hr{
+    opacity: 1;
+    border-top : 3px solid $dark-blue;
+  }
+}
+
+// Media Gallery style
+.media-sec{
+  background: $dark-blue;
+  .title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  hr{
+    opacity: 1;
+    border-top : 3px solid white;
+  }
+  .desc{
+    color: white;
+  }
+
+  // navigation icon style
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev,
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    background: rgba(1, 8, 29, 0.4);
+    border-radius: 5px;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: small;
+    color: white;
+    font-weight: bold;
+  }
+}

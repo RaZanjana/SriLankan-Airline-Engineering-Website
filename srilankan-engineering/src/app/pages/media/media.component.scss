@@ -1,0 +1,20 @@
+$dark-blue-hover: #090C14;
+$para-color: #E4E4E4;
+$service-prev-gradient :linear-gradient(180deg, rgba(18, 22, 34, 0) 0%, #121622 100%);
+$service-prev-gradient-hover : linear-gradient(180deg, rgba(9, 12, 20, 0) 0%, #090C14 100%);
+
+.all-media-sec{
+    .mat-paginator {
+        background: transparent;
+        color: $para-color;
+    }
+    .mat-select-arrow {
+        color: #ffffff;
+    }
+    .mat-select-value {
+        color: rgb(211 211 211 / 87%) !important;
+    }
+    .media-headingsec p{
+        color: $para-color;
+    }
+}

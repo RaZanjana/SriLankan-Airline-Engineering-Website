@@ -1,0 +1,8 @@
+<div class="container-fluid d-flex justify-content-center align-items-center" style="--background-image: url({{data.bgImg}});">
+    <div class="container header p-4 text-center">
+        <h5 class="sub-title mb-0">{{data.subTitle}}</h5>
+        <h1 class="title">{{data.title}}</h1>
+        <h3 class="content">{{data.content}}</h3>
+        <button mat-raised-button class="mat-btn-light brochure-btn {{data.btnVisible}}" (click)="Downloadfile(data.fileURL)">  Download brochure&nbsp;&nbsp;<i class="bi bi-file-earmark-arrow-down-fill"></i></button>
+    </div>
+</div>

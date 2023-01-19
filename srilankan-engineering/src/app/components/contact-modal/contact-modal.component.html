@@ -1,0 +1,36 @@
+<div class="modal-sec" style="--background-image: url({{bg}});">
+    <div class="modal-header">
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"><i
+                class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="modal-body mt-0 ms-3 me-3 mb-3">
+        <!-- <p>Hello, {{ contactOne }}!</p> -->
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6 left">
+                <div>
+                    <img src="assets/images/logo-white.png" alt="SriLankan Engineering" class="img-fluid mb-2"
+                        width="150">
+                    <p class="text-white">Feel free to contact us for anything you want</p>
+                    <div>
+                        <a href="tel:{{ contactOne }}" class="btn btn-link mb-2">{{ contactOne }}</a>
+                    </div>
+                    <div>
+                        <a href="tel:{{ contactTwo }}" class="btn btn-link">{{ contactTwo }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 right">
+                <div>
+                    <h2 class="cont-title mb-2">Get in touch</h2>
+                    <div class="social-media d-flex justify-content-between mb-4">
+                        <a href="https://www.linkedin.com/showcase/srilankanengineering/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.facebook.com/flysrilankan" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com/flysrilankan" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.google.lk/maps/place/SriLankan+Engineering/@7.1807718,79.8877195,17z/data=!3m1!4b1!4m5!3m4!1s0x3ae2efbbe7e635f9:0x34a2a3b4b489d44b!8m2!3d7.1807665!4d79.8899082?hl=en" target="_blank"><i class="bi bi-map"></i></a>
+                    </div>
+                    <a href="mailto:{{contactMail}}" class="mail text-white">{{contactMail}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

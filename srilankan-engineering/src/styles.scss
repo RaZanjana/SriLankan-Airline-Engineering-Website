@@ -1,0 +1,160 @@
+@import '~lightgallery/scss/lightgallery';
+/* You can add global styles to this file, and also import other style files */
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end !important;
+}
+
+.fflag.ff-lg{
+    width: 70px !important;
+    height: 40px !important;
+}
+
+.navbar-toggler{
+    border-color: rgba(255, 255, 255, 0.262) !important;
+    color: white !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), url(assets/fonts/poppins/Poppins-Regular.ttf) format("truetype");
+
+    font-family: "Roboto";
+    src: local("Roboto"), url(assets/fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+
+$primary-blue: #0088DD;
+
+$para-color: #E4E4E4;
+$gray: #f2f2f2;
+$dark-gray: #262626;
+$dark: #212121;
+$green: #018F47;
+$red: #D71440;
+$orange : #F26122;
+$dark-blue: #121622;
+$light-blue: #0087BF;
+
+$dark-blue-hover: #090C14;
+$light-blue-hover : #0A4595;
+
+$carousel-gradient : linear-gradient(180deg, #121622 0%, rgba(18, 22, 34, 0.42916) 46.35%, rgba(18, 22, 34, 0) 100%), rgba(0, 0, 0, 0.35);
+$service-prev-gradient : linear-gradient(180deg, rgba(18, 22, 34, 0) 0%, #121622 100%);
+$service-prev-gradient-hover : linear-gradient(180deg, rgba(9, 12, 20, 0) 0%, #090C14 100%);
+$media-prev-gradient-hover : linear-gradient(180deg, rgba(18, 22, 34, 0) 0%, #121622 100%), linear-gradient(0deg, rgba(18, 22, 34, 0.5), rgba(18, 22, 34, 0.5));
+$service-gradient : linear-gradient(90deg, rgba(18, 22, 34, 0) 0%, rgba(18, 22, 34, 0.729167) 50%, #121622 100%);
+$workshop-gradient : linear-gradient(90deg, #121622 0%, rgba(18, 22, 34, 0.772917) 49.79%, rgba(18, 22, 34, 0) 100%);
+
+//box-shadow
+$text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+//filter
+$image-blur: blur(5px);
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    background-color: $dark-blue;
+}
+
+.btn-primary-dark{
+    background-color: $dark-blue;
+    text-transform: uppercase;
+    color: white;
+    &:hover, &:focus, &:active{
+        background-color: $dark-blue-hover !important;
+    }
+}
+.btn-primary{
+    background-color: $light-blue !important;
+    text-transform: uppercase;
+    
+    &:hover, &:focus, &:active{
+        background-color: $dark-blue !important;
+    }
+}
+
+.mat-raised-button.mat-button-disabled.mat-button-disabled{
+    &:hover, &:focus, &:active{
+        background-color: rgba(0,0,0,.12) !important;
+    }
+}
+
+.mat-btn-light{
+    text-transform: uppercase;
+}
+
+.mat-button-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+// Tab view style
+.mat-tab-label {
+    color: white;
+    font-size: medium;
+    font-family: 'Poppins', sans-serif; 
+    opacity: .8 !important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar , .mat-tab-label-active{
+    background-color: white;
+}
+
+.mat-tab-label-active{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 1 !important;
+    .mat-tab-label-content {
+        color: $dark-blue !important;
+    } 
+}
+
+.mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+    border-color: rgba(255,255,255,.38);
+}
+
+.mat-tab-header-pagination-chevron {
+    border-color: rgba(255,255,255,.87);
+}
+
+.mat-tab-header {
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+// Paginator style
+.all-media-sec{
+    .mat-select-value {
+        color: rgb(211 211 211 / 87%) !important;
+    }
+    .mat-select-arrow {
+        color: rgb(255 255 255 / 54%);
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: rgb(255 255 255 / 42%);
+    }
+    .mat-icon-button.mat-button-disabled.mat-button-disabled{
+        color: rgb(255 255 255 / 26%);
+    }
+}
+
+
+// Scroll Bar
+::-webkit-scrollbar {
+    width: .8em !important;
+  }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3) !important;
+  }
+
+::-webkit-scrollbar-thumb {
+    background-color: white !important;
+    border-radius: 15px !important;
+  }

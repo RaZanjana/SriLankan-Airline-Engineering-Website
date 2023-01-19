@@ -1,0 +1,30 @@
+<!-- Page header -->
+<div class="header-sec" *ngFor="let hData of headerData">
+  <app-page-header [data]='hData'></app-page-header>
+</div>
+<!-- Page Content -->
+<div class="container-fluid content">
+  <div class="title-section p-4 d-flex align-items-center">
+    <h2 class="content-title mb-0">Facilities&nbsp;&nbsp;</h2>
+    <app-dot-line class="line"></app-dot-line>
+  </div>
+  <div class="tab-view">
+    <mat-tab-group class="tab-group" [(selectedIndex)]="selectedTab" animationDuration="2000ms" mat-stretch-tabs>
+      <mat-tab *ngFor="let facility of FacilityItems" [label]="facility.title">
+        <ng-template md-tab-label>
+          {{facility.title}}
+        </ng-template>
+        <section class="tab-container">
+          <div>
+            <app-tab-item [tabData]='facility'></app-tab-item>
+          </div>
+        </section>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+
+<!-- Testimonials content -->
+<div class="container">
+  <app-testimonials></app-testimonials>
+</div>

@@ -1,0 +1,93 @@
+$label-color:#4D4D4D;
+$dark-blue: #121622;
+
+h1{
+    font-weight: 700;
+}
+.bg{
+    background: linear-gradient(180deg, #121622 0%, rgba(18, 22, 34, 0) 100%), linear-gradient(0deg, rgba(18, 22, 34, 0.5), rgba(18, 22, 34, 0.5)), var(--ftbackground-image);
+    border-radius: 0px 0px 15px 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed !important;
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+.title{
+    text-align: right !important;
+}
+.right{
+    margin-left: 2rem;
+}
+.left{
+    padding-right: 2rem;
+    border-right: #ffffff solid 4px;
+}
+.form-area{
+    border-radius: 15px;
+    width: 100%;
+    padding: 2rem;
+    .inq-label{
+        font-weight: 700;
+        color: $label-color;
+    }
+}
+.btm-rw{
+    .terms a{
+        color: $dark-blue;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .left{
+        padding: 0 !important;
+        border: none !important;
+        justify-content: start !important;
+        .title{
+            text-align: left !important;
+            br{
+                display: none;
+            }
+        }
+    }
+    .right{
+        margin-left: 0 !important;
+        .bg-white {
+            --bs-bg-opacity: .9;
+            background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+        }
+    }
+}
+@media only screen and (max-width: 426px){
+    .right{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+        .mat-form-field{
+            padding: 0 !important;
+        }
+        .btm-rw .col{
+            padding: 0 !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 376px){
+    .right{
+        .btm-rw{
+            justify-content: center !important;
+            .terms-div{
+                margin-bottom: 1rem;
+                justify-content: center !important;
+            }
+            .submit-btnsec{
+                justify-content: center !important;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 320px){
+    .genInq{
+        margin-bottom: .5rem;
+    }
+}
